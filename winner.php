@@ -195,7 +195,7 @@
                     $product_sql="SELECT * FROM product WHERE product_name='$product_name'";
                     $product_res=mysqli_query($conn,$product_sql);
                     while ($product_row=mysqli_fetch_assoc($product_res)) {
-                      $product_image=$product_row['image'];
+                      $product_image=unserialize($product_row['image'])[0];
                     }
                 ?>
                 <label for="" class="control-label"><?php echo $product_name; ?></label>
