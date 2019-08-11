@@ -54,7 +54,20 @@
 	</div>
 	<div class="form-group">
 		<label for="" class="control-label">Product Category Id</label>
-		<input type="text" class="form-control" name="product_cat_id" value="<?php echo $product_cat_id ?>">
+<!-- 		<input type="text" class="form-control" name="product_cat_id" value="<?php echo $product_cat_id ?>"> -->
+		<select name="product_cat_id" id="" class="form-control">
+	        <?php 
+			    $query="SELECT * FROM category";
+			    $res=mysqli_query($conn,$query);
+			    
+			    while ($row=mysqli_fetch_assoc($res)) {
+			        $catid=$row['catid'];
+			        $catname=$row['catname'];
+			        echo "<option value='{$catid}'>{$catname}</option>";
+			    }
+	     	?>
+	        
+	    </select>
     </div>
 	<div class="form-group">
 		<label for="" class="control-label">Product Price</label>
