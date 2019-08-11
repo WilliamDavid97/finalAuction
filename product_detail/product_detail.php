@@ -217,6 +217,7 @@
                                     $query="SELECT * FROM auction_price WHERE product_id=$product_id  ORDER BY price DESC LIMIT 1";
                                     $timeres=mysqli_query($conn,$query);
                                     
+                                        if (mysqli_num_rows($timeres)>0) {
                                         while ($row1=mysqli_fetch_assoc($timeres)) {
                                             $uname=$row1['user_name'];
                                             $pname=$row1['product_name'];
@@ -229,6 +230,7 @@
                                             $resu=mysqli_query($conn,$pricequery);
                                             confirm_query($resu);
                                         }
+                                    }
                             }
                             // $time =1000*60*60*24;
                             // $end_time=$product_date + $time;
