@@ -89,16 +89,7 @@ $email=$_SESSION['email'];
               $query="INSERT INTO product(product_name, price, description, product_date, image, catid,auction_time)
                        VALUES ('$product_name','$product_price','$description',now(),'$product_image','$product_cat_id','$auction_time')";
               $result=mysqli_query($conn,$query);
-              $product_id=$_GET['delete'];
-              $selectquery="SELECT * FROM sent_product WHERE product_id=$product_id";
-                  $selectres=mysqli_query($conn,$selectquery);
-                  while ($selectrow=mysqli_fetch_assoc($selectres)) {
-                    for ($i=0; $i <count(unserialize($selectrow['image'])) ; $i++) { 
-                      unlink("../images/".unserialize($selectrow['image'])[$i]);
-                    }
-                    
-                  }
-              $dquery="DELETE FROM sent_product WHERE product_id=$sent_id";
+              $dquery="DELETE FROM sent_product WHERE product_id=$product_id";
               $dres=mysqli_query($conn,$dquery);
               confirm_query($dres);
           }
