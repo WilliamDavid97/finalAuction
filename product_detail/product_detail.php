@@ -241,21 +241,45 @@
                                         <ol class="carousel-indicators">
                                             <?php 
                                                 $noimage=count(unserialize($image));
+                                                if ($noimage>4) {
+                                                    $noimage=4;
+                                                }
                                                 for ($i=0; $i <$noimage ; $i++) { 
                                                     $eachimage=unserialize($image)[$i];
-                                                    ?>
-                                                    <li class="active" data-target="#product_details_slider" data-slide-to="<?php echo $i; ?>" style="background-image: url(../images/<?php echo $eachimage; ?>);">
+                                                    switch ($i) {
+                                                        case '0':
+                                                            ?>
+                                                            <li class="active" data-target="#product_details_slider" data-slide-to="0" style="background-image: url(../images/<?php echo $eachimage; ?>);">
+                                                        </li>
+                                                            <?php
+                                                            break;
+
+                                                        case '1':
+                                                            ?>
+                                                            <li data-target="#product_details_slider" data-slide-to="1" style="background-image: url(../images/<?php echo $eachimage; ?>);">
                                                     </li>
+                                                            <?php
+                                                            break;
+
+                                                        case '2':
+                                                            ?>
+                                                            <li data-target="#product_details_slider" data-slide-to="2" style="background-image: url(../images/<?php echo $eachimage; ?>);">
+                                            </li>
+                                                            <?php
+                                                            break;
+                                                        
+                                                        default:
+                                                            ?>
+                                                            <li data-target="#product_details_slider" data-slide-to="3" style="background-image: url(../images/<?php echo $eachimage; ?>);">
+                                            </li>
+                                                            <?php
+                                                            break;
+                                                    }
+                                                    ?>
+                            
                                                     <?php
                                                 }
-                                             ?>
-                                            
-                                            <!-- <li data-target="#product_details_slider" data-slide-to="1" style="background-image: url(img/product-img/pro-big-2.jpg);">
-                                            </li>
-                                            <li data-target="#product_details_slider" data-slide-to="2" style="background-image: url(img/product-img/pro-big-3.jpg);">
-                                            </li>
-                                            <li data-target="#product_details_slider" data-slide-to="3" style="background-image: url(img/product-img/pro-big-4.jpg);">
-                                            </li> -->
+                                                ?>
                                         </ol>
                                         
                                         <div class="carousel-inner">
@@ -267,7 +291,7 @@
                                                 for ($i=0; $i <$noimage ; $i++) { 
                                                     $eachimage=unserialize($image)[$i];
                                                     switch ($i) {
-                                                        case '1':
+                                                        case '0':
                                                             ?>
                                                             <div class="carousel-item active">
                                                                 <a class="gallery_img" href="../images/<?php echo $eachimage; ?>">
@@ -277,7 +301,7 @@
                                                             <?php
                                                             break;
 
-                                                        case '2':
+                                                        case '1':
                                                             ?>
                                                             <div class="carousel-item">
                                                                 <a class="gallery_img" href="../images/<?php echo $eachimage; ?>">
@@ -287,7 +311,7 @@
                                                             <?php
                                                             break;
 
-                                                        case '3':
+                                                        case '2':
                                                             ?>
                                                             <div class="carousel-item">
                                                                 <a class="gallery_img" href="../images/<?php echo $eachimage; ?>">
