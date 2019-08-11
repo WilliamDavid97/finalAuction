@@ -1,0 +1,34 @@
+
+
+.single .wlt_shortcode_category  a { margin-right:10px; }
+ 
+
+ 
+
+
+.single .nav-info { border-bottom:1px solid #ddd; padding-bottom:10px; }
+
+.single .card.reputation .star {    font-size: 20px;    color: #fff;    line-height: 43px;    width: 45px;    height: 45px;}
+.single .card.reputation .grey {    color: #bbbbbb;    font-size: 14px;}
+.single .card.reputation .wlt_starrating { margin-top:5px; display: block; }
+.single .card.reputation .wlt_starrating .fa-star { font-size:16px; }
+
+.single .box-count-down .box-count{ font-size:31px;  width: 22%;  height:90px;   float: left;     border-radius: 4px;  text-align: center;  padding: 2px;  position: relative;   margin-right: 13px;  
+
+    background: #0e7dd3;
+    color: #FFF;
+    border: 2px solid #0e7dd3;
+}
+.single .box-count-down .box-count:last-child{ margin-right:0px; }
+.single .box-count-down .dot{  display: none;}
+.single .box-count-down .box-count:before{  width: 100%;  height: 100%;    float: left;  content: '';} 
+.single .box-count-down .number{  position: absolute;  width: 100%;  left: 0;  top: 10px;  font-weight:bold;}
+.single .box-count-down .text{  position: absolute;  width: 100%;  left: 0;  bottom: 8px;  font-size: 14px;}
+ 
+.single .rightbit .btn { border-radius:4px; }
+.single .rightbit .hbidtxt {    font-size: 25px;    color: #fff; line-height: 50px;}
+
+
+.single #bidding_history_data .table td, .single #bidding_history_data .table th {    border-top: 0px;}
+#bidding_highest_bidder .avatar { padding:2px; }
+
