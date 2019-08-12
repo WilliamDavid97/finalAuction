@@ -159,7 +159,7 @@
                              $product_id=$row['product_id'];
                              $product_name=$row['product_name'];
                              $price=$row['price'];
-                             $image=$row['image'];
+                             $image=unserialize($row['image'])[0];
                              $time=$row['product_date'];
                              $description=$row['description'];
                              $catid=$row['catid'];
@@ -173,8 +173,8 @@
 
                 <div class="row" style="margin-top:15px;">
                   <div class="col-md-4">
-                    <a class="gallery_img" href="<?php echo $image; ?>">
-                        <img class="d-block w-100" src="<?php echo $image; ?>"  style="width: 200px;height: 200px;">
+                    <a class="gallery_img" href="images/<?php echo $image; ?>">
+                        <img class="d-block w-100" src="images/<?php echo $image; ?>"  style="width: 200px;height: 200px;">
                     </a>
                   </div>
                   <div class="col-md-8 offset-4 text-left">
