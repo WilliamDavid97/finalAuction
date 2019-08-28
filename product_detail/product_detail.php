@@ -209,6 +209,7 @@
                                 $description=$row['description'];
                                 $image=$row['image'];
                                 $price=$row['price']; 
+                                date_default_timezone_set('Asia/Rangoon');
                                 $time=(strtotime($row['product_date'])+(24*3600))*10000;
                                 $mictime=microtime(time())*10000;                
                             }
